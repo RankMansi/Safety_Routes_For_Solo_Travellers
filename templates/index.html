@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Safe Route Finder</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <!-- Your app CSS -->
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+  />
+</head>
+<body>
+  <!-- Full‑screen map container -->
+  <div id="map"></div>
+
+  <!-- Control panel: buttons stack vertically -->
+  <div id="panel">
+    <button id="findBtn">Find Safe Route</button>
+    <button id="walkBtn">Walk</button>
+    <button id="busBtn">Bus</button>
+  </div>
+
+  <!-- Display times below the panel -->
+  <div id="travelTimes"></div>
+
+  <!-- Legend -->
+  <div id="legend">
+    <h4>Route Types</h4>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: green"></div>
+      <span>Safe Walking Route</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: red"></div>
+      <span>Unsafe Walking Route</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: blue"></div>
+      <span>Safe Bus Route</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: orange"></div>
+      <span>Unsafe Bus Route</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background-color: red; opacity: 0.5"></div>
+      <span>Crime Hotspots</span>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Your map logic -->
+  <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* 1. Full‑screen layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* 2. Map fills entire viewport */
+#map {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 3. Panel at top‑left, buttons stacked */
+#panel {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: white;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#panel button {
+  display: block;       /* stack vertically */
+  width: 100%;
+  right: 65px;         /* increased from 45px to move buttons right */
+  margin: 5px 0;        /* space between */
+  padding: 8px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#panel button:hover {
+  background: #0056b3;
+}
+
+/* 4. Travel times box */
+#travelTimes {
+  position: absolute;
+  top: 170px;   /* below the three buttons */
+  left: 10px;
+  z-index: 1000;
+  background: white;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* 5. Legend */
+#legend {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  z-index: 1000;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#legend h4 {
+  margin: 0 0 5px 0;
+  text-align: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 1px solid #ccc;
+}
+
+.legend-item span {
+  font-size: 12px;
+}
+
